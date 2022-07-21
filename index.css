@@ -173,9 +173,7 @@
     margin: 20px 0px;
     width: 100%;
 }
-#container2>div>div{
-    /* border: 1px solid red; */
-}
+
 
 #container3{
     background-color: #e8f8f2;
@@ -506,6 +504,7 @@
     background-color: #e8f8f2;
     margin-top: -20px;
     width: 100%;
+    border: 1px solid red;
   }
 
   #cont2img2{
@@ -539,6 +538,9 @@
     margin: auto;
   } */ */
 
-  #container7 button{{
-    padding-left: 500px
+  #container7 button{
+    padding-left: 500px;
+    margin: auto;
+
+    
   }

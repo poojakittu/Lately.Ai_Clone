@@ -1,1 +1,143 @@
-"hello"
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./signup.css" />
+</head>
+<body>
+    <div id="container">
+        <div id="con-first">
+            <h1>
+                Welcome to Lately!
+            </h1>
+            <p>
+                The world's most human A.I. is waiting for you - start your <b>free 7-day trial </b>today!
+            </p>
+
+        </div>
+
+<!-- #######################form################################# -->
+
+        <div id="con-form">
+            <div>
+                
+                    <form action="" id="form">
+                        <table>
+                            <tr>
+                                <td>
+                                    <span id="font">First Name</span><br>
+                                    <input  id="name" name="fname" type="text" />
+                                </td>
+                               
+
+                                <td id="secondtd">
+                                    <span>Last Name</span><br>
+                                    <input  id="name" name="lname" type="text" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2" >
+                                    <span>Email Address</span><br>
+                                    <input  id="name1" name="email" type="text" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2" >
+                                    <span>Password(must be at least 8 character)
+                                        
+                                    </span><br>
+                                    <input  id="name1" name="pass" type="password" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2" >
+                                    <span> Confirm Password  
+                                    </span><br>
+                                    <input  id="name1" name="password1" type="password" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div id="colgrid">
+                                    <div id="rechapcha">
+                                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                        <label for="vehicle1"> I'm not a Robot</label><br>
+                                        
+                                    </div>
+                                    <div>
+                                            <img src="data:image/png;base64,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">
+                                    
+                                    </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <tr >
+                                <td colspan="2" >
+                                    <input id="submit" type="submit" name="submit" value="Submit" />
+                                    
+                                </td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                  </form>
+            </div>
+            <div>
+                <div id="con2div">
+                    <div id="con2first"><span id="green">Lately is an A.I.-powered content creation engine </span><span id="black">
+                        that learns your brand voice and which words will generate you the most leads.</span>
+                    
+                    </div>
+                    <div id="con2back">
+
+                    </div>
+                
+
+            </div>
+            
+
+        </div>
+    </div>
+</body>
+</html>
+
+
+<script>
+    let form=document.querySelector("form");
+    form.addEventListener("submit",myfun);
+    
+    let arr=JSON.parse(localStorage.getItem("newuser"))||[];
+    function myfun(){
+      event.preventDefault()  
+    //   window.location.href="./applied.html"    
+      let obj={
+        fname:form.fname.value,
+        lname:form.lname.value,
+        email:form.email.value,
+        password:form.pass.value,
+        password1:form.password1.value,
+      }  
+      
+
+      if(obj.fname==""||obj.lname==""||obj.email==""||obj.password==""||obj.password1==""){
+        
+        return
+
+    }
+    arr.push(obj);
+      localStorage.setItem("newuser",JSON.stringify(arr));
+    }
+    
+
+
+
+
+</script>
