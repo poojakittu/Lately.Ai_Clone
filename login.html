@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./login.css" />
+</head>
+<body>
+    <div id="container">
+        <div id="container1">
+            <img src="https://dashboard.lately.ai/images/logo_lately_bg_light.svg">
+        </div>
+        <div id="container2">
+            
+                <h1>Log In</h1>/
+                <h3> Hello, Superyou.</h3>
+                <hr style="height:1px;border-width:0;color:gray;background-color:gray;width: 100%">
+                <form action="" id="form">
+
+                <span id="name1">Email Address</span>
+                <input  id="name" name="email" type="text" />
+                <br>
+                <br>
+
+                <input id="submit" type="submit" name="submit" value="Login" />
+
+
+               </form>    
+            
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",singin);
+    let arr1=JSON.parse(localStorage.getItem("newuser"));
+    function singin(event){
+
+        event.preventDefault();
+       
+
+            if(arr1.length==0){
+                alert("No User till Now")
+                return
+            }
+
+            let obj={
+                email:form.email.value,
+            }
+            let flag=false
+            if(obj.email==""){
+                return
+            }
+            arr1.forEach(function(e){
+                if(obj.email==e.email && obj.password==e.password){
+                    flag=true;
+                    localStorage.getItem("signin",JSON.stringify(e))
+                    window.location.href="./login1.html"
+                }
+            })
+            if(flag==false){
+                alert("User Not Exists");
+
+            }
+        
+
+    }
+        
+</script>
