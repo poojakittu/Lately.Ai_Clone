@@ -26,21 +26,28 @@
                         <span id="name1">Password
                             
                         </span><br>
-                        <input  id="name" name="pass" type="password" />
+                        <input  id="name" name="password" type="password" />
                     </td>
                 </tr>
 
                 <tr>
                     <td  >
-                        <input id="submit" type="submit" name="submit" value="Submit" />
+                        <input id="submit" type="submit" name="submit" value="LOG IN" />
+                        <input id="forgot" type="submit" name="forgot" value="Forgot Password" />
                         
                     </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>>
                 </tr>
 
                 
 
             </table>
         </form>
+        <span id="lasttext">Don't have an account yet? Sign up now!</span>
     </div>
 </body>
 </html>
@@ -48,12 +55,13 @@
 <script>
     document.querySelector("form").addEventListener("submit",singin);
     let arr1=JSON.parse(localStorage.getItem("newuser"));
+    let form=document.querySelector("form")
     function singin(event){
 
         event.preventDefault();
        
 
-            if(arr1.length==0){
+            if(arr1.length===0){
                 alert("No User till Now")
                 return
             }
@@ -62,15 +70,15 @@
                 email:form.email.value,
                 password:form.password.value
             }
-            console.log(obj)
+
             let flag=false
             if(obj.email==""||obj.password==""){
                 return
             }
             arr1.forEach(function(e){
-                if(obj.email==e.email && obj.password==e.password){
+                if(obj.email===e.email && obj.password===e.password){
                     flag=true;
-                    localStorage.getItem("signin",JSON.stringify(e))
+                    localStorage.setItem("signin",JSON.stringify(e))
                     window.location.href="./payment.html"
                 }
             })
@@ -78,6 +86,7 @@
                 alert("User Not Exists");
 
             }
-        
+       
 
     }
+</script>

@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./payment.css" />
+</head>
+<body>
+    <div id="container">
+        <div id="container1">
+            <img src="https://app.lately.ai/img/lately_logo_nav_beta.01a45e48.jpg">
+        </div>
+        <div id="container2">
+            
+                <h1>Once Lately's A.I. generates your social posts, how would you like to publish them?</h1>
+                <h3>Select from the below to connect to one of our integrated publishing platforms (Hootsuite or HubSpot Social), 
+                    or download your social posts to use anywhere you want.</h3>            
+        </div>
+        <div id="container3">
+            <div id="con_grid">
+            <div>
+                <h4>Publish with Lately</h4>
+                <img src="https://app.lately.ai/img/lately_logo.53defb01.jpg">
+                <p>Publish Lately's A.I.-generated posts right from here. Easy peasy.</p>
+                <button><a href="./payment2.html">Select</a></button>
+
+            </div>
+
+            <div>
+                <h4>Publish with Hootsuite</h4>
+                <img src="https://app.lately.ai/img/hootsuite-logo.6fb06cd0.png">
+                <p>Send Lately's A.I.-generated posts to your Hootsuite account scheduler for publishing.</p>
+                <button><a href="./payment2.html">Select</a></button>
+
+            </div>
+
+            <div>
+                <h4>Publish with Hubspot Social</h4>
+                <img src="https://app.lately.ai/img/hubspot_marketing_hub_logo.17741bc8.png">
+                <p>Send Lately's A.I.-generated posts to your HubSpot Social account for publishing.</p>
+                <button><a href="./payment2.html">Select</a></button>
+
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",singin);
+    let form=document.querySelector("form")
+    let arr1=JSON.parse(localStorage.getItem("newuser"));
+    function singin(event){
+
+        event.preventDefault();
+       
+
+            if(arr1.length==0){
+                alert("No User till Now")
+                return
+            }
+
+            let obj={
+                email:form.email.value,
+                
+            }
+            
+            let flag=false
+            if(obj.email==""){
+                return
+            }
+            arr1.forEach(function(e){
+                if(obj.email==e.email){
+                    flag=true;
+                    localStorage.getItem("signin",JSON.stringify(e))
+                    window.location.href="./login1.html"
+                }
+            })
+            if(flag==false){
+                alert("User Not Exists");
+
+            }
+        
+
+    }
+</script>

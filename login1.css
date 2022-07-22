@@ -18,7 +18,7 @@
     margin-top: 120px;
 }
 body{
-    background-color: #e4f2ea;
+    background-color:#f7f9fb ;
 }
 
 #container h1{
@@ -70,12 +70,36 @@ input[type=text] {
   }
 
   #submit{
-    width: 100px;
+    width: 80px;
     height: 40px;
     color: white;
-    background-color: #444;
+    background-color: #42b983;
     margin: auto;
     border: 0px;
     border-radius: 5px; 
-    margin-left: 120px;
+    font-size: 1rem;
+    font-weight: 400
+    
+  }
+
+  #forgot{
+    border:none;
+    background-color: #f7f9fb ;
+    font-size: 80%;
+    font-weight: 400;
+    text-align: center;
+    width: 140px;
+    height: 40px;
+    border-radius: 5px;
+  }
+
+  #lasttext{
+    font-family: Nunito Sans,sans-serif;
+    
+    color: #304455;
+    text-align: left;
+    font-size: 80%;
+    
+    margin-top: 40px;
+    margin-bottom: 130px;
   }
