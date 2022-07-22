@@ -117,7 +117,7 @@
     let arr=JSON.parse(localStorage.getItem("newuser"))||[];
     function myfun(){
       event.preventDefault()  
-    //   window.location.href="./applied.html"    
+          
       let obj={
         fname:form.fname.value,
         lname:form.lname.value,
@@ -127,13 +127,15 @@
       }  
       
 
-      if(obj.fname==""||obj.lname==""||obj.email==""||obj.password==""||obj.password1==""){
+      if(obj.fname==""||obj.lname==""||obj.email==""||obj.password==""||obj.password1=="")
+      {
         
         return
-
     }
+
     arr.push(obj);
-      localStorage.setItem("newuser",JSON.stringify(arr));
+    localStorage.setItem("newuser",JSON.stringify(arr));
+    window.location.href="./login.html"
     }
     
 

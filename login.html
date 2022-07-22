@@ -1,55 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./login.css" />
+</head>
+<body>
+    <div id="container">
+        <div id="container1">
+            <img src="https://dashboard.lately.ai/images/logo_lately_bg_light.svg">
+        </div>
+        <div id="container2">
+            
+                <h1>Log In</h1>/
+                <h3> Hello, Superyou.</h3>
+                <hr style="height:1px;border-width:0;color:gray;background-color:gray;width: 100%">
+                <form action="" id="form">
 
-        <div id="container3">
-            <div>
-            <div >
-                <img src="https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/61c1fcb478083ac00ef63308_heart.png">
-            </div>
-            <div id="three">
-                <h1>Magnify your sales and marketing copy with AI that writes for people, not targets.</h1>    
-                <p>  The right words turn customers into evangelists. So aim higher with artificial intelligence that generates
-                     high-performing, transformative social media content.</p><br>
-                     <a href="./signup.html"><button>GIVE IT A WHIRL</button></a>
-            </div>
+                <span id="name1">Email Address</span>
+                <input  id="name" name="email" type="text" />
+                <br>
+                <br>
 
+                <input id="submit" type="submit" name="submit" value="Login" />
+
+
+               </form>    
+            
         </div>
     </div>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",singin);
+    let arr1=JSON.parse(localStorage.getItem("newuser"));
+    function singin(event){
 
-    <div id="container6">
-        <div id="cont1">
-            <h1>
-                Generate meaningful words that convert with the world’s most human AI
-            </h1>
-            <h4>
-                “Instead of guessing what messages might stick in a vacuum, Lately’s AI counts up all the digital engagement
-                 breadcrumbs left behind and predicts what new messages are most likely to get noticed. Brilliant.”
-            </h4>
-        </div>
-        <div id="cont2">
-            <div>
-                <img id="cont2img" src="https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/61ca0d9fcf3e4c4a4f82bb64_erics-p-500.png">
-            </div>
-            <div id="cont2div">
-                <h1>Eric Schwartzman</h1>
-                    <p>Best-selling author and marketing consultant to Boeing,
-                     City National Bank, Hard Rock, Johnson & Johnson, Lucasfilm, Olympics, US Dept. of State and dozens of small and medium businesses.</h1>
-                    </p>
-            </div>
-            <div>
-                <img src="https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/61ca0d28b9e99b6ab737d081_esass-p-500.png">
-            </div>
-        </div>
+        event.preventDefault();
+       
 
-    </div>
+            if(arr1.length==0){
+                alert("No User till Now")
+                return
+            }
 
-    <div id="container7">
-        <div>
-            <h1>
-                Ready to start generating more effective social posts with AI?
-            </h1>
-            <button>TRY IT FREE</button>
-        </div>
-    </div>
+            let obj={
+                email:form.email.value,
+            }
+            let flag=false
+            if(obj.email==""){
+                return
+            }
+            arr1.forEach(function(e){
+                if(obj.email==e.email && obj.password==e.password){
+                    flag=true;
+                    localStorage.getItem("signin",JSON.stringify(e))
+                    window.location.href="./login1.html"
+                }
+            })
+            if(flag==false){
+                alert("User Not Exists");
 
-    </div>
+            }
+        
 
-</div>
+    }
+        
+</script>
