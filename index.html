@@ -4,7 +4,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./test.css" />
+    <style>
+        #inner{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            background-color: white;
+            margin-top: 11px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            width: 1000px;
+            column-gap: 10px;
+        }
+        #inner2{
+           
+            background-color: white;
+            margin-top: 8px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            width: 220px;
+            padding: 20px;
+            text-align: left;
+            padding-left: 30px;
+           
+        }
+        #inner div{
+        padding: 15px;
+        text-align: left;
+        
+           
+       }
+        #blank{
+            background-color: transparent;
+            height: 20px;
+        }
+
+        #inner h4{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            color: #133d36;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.25px;
+        }
+        #inner p{
+        
+            flex-wrap: wrap;
+            color: #5f5f5f;
+            font-size: 15px;
+            line-height: 21px;
+            font-weight: 300;
+        }
+
+        #inner h5{
+            display: block;
+            font-size: 0.83em;
+            margin-block-start: 1.67em;
+            margin-block-end: 1.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+    }
+    .patner1{
+        background-color: #e8f8f2;
+    }
+    .patner1:hover{
+            color: green;
+        }
+    </style>
 </head>
 <body>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -27,14 +92,44 @@
                     <div class="dropdown">
                         <span>Product</span>
                         <div class="dropdown-content">
-                            <h4 class="patner">PARTNERS & INTEGRATIONS</h4>
-                            Find social media platform 
-                            integrations and content extensions 
-                            to enhance your AI content creation
-                            experience.
-                            <h4>HubSpot Marketing Hub</h4>
-                           <h4>Hootsuite</h4> 
-                            <h4>UpContent</h4>
+                            <div id="blank">
+
+                            </div>
+                            <div id="inner">
+                                <div class="patner1">
+                                    <h4 >PARTNERS & INTEGRATIONS</h4>
+                                    <p>Find social media platform 
+                                    integrations and content extensions 
+                                    to enhance your AI content creation
+                                    experience.</p>
+                                    <h5>HubSpot Marketing Hub</h5>
+                                    <h5>Hootsuite</h5> 
+                                    <h5>UpContent</h5>
+                                </div>
+                                <div>
+                                    <h4 >AI CONTENT WRITER</h4>
+                                    <p>Automatically writes and pre-tests content for your social media programs</p>
+                                    <br>
+                                    <h4>SOCIAL ANALYTICS</h4>
+                                    <p>Informs your content strategy and make your content more engaging with content analytics</p>
+                                </div>
+                                <div >
+                                    <h4>SOCIAL MEDIA MARKETING</h4>
+                                    <p>Everything you need to scale your social media marketing program</p>
+                                    <br>
+                                    <h4>SOCIAL SELLING</h4>
+                                    <p>Extend your social content across executives, sales, employees, franchises, and more</p>
+                                    
+                                </div>
+                                <div class="patner1">
+                                    <h4 >VIDEO AUTOGENERATOR</h4>
+                                    <p>Turn your company videos into bite-sized social media video clips and social media posts</p>
+                                    <br>
+                                    <h4>PARENT ACCOUNTS</h4>
+                                    <p>Easily manage parent-child social media accounts</p>
+                                </div>
+                                
+                            </div>
                         
                            
                         </div>
@@ -45,6 +140,10 @@
                     <div class="dropdown">
                         <span>Resource</span>
                         <div class="dropdown-content">
+                            <div id="blank">
+
+                            </div>
+                        <div id="inner2">
                           <p>Customers Stories</p>
                           <p>Lately Office Hours SIGN-UP</p>
                           <p>Lately LIVE Replay</p>
@@ -52,6 +151,7 @@
                           <p>Ebooks</p>
                           <p>Blog</p>
                           <p>Help Center</p>
+                          </div>
                         </div>
                       </div>
                     
@@ -61,11 +161,16 @@
                     <div class="dropdown">
                         <span>Comapny</span>
                         <div class="dropdown-content">
+                            <div id="blank">
+
+                            </div>
+                        <div id="inner2">
                           <p>About</p>
                           <p>LeaderShip</p>
                           <p>Press & News</p>
                           <p>Lately Professional Services</p>
                           <p>Contact Us</p>
+                          </div>
                         </div>
                       </div>
                 </div>
@@ -388,10 +493,5 @@
     </div>
 
 </div>
-        
-
-
-
-
     </body>
     </html>
