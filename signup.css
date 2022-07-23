@@ -7,6 +7,31 @@
     background-color: #f7f9fb;
     
 }
+#container1{
+    position: sticky;    
+    top:0
+}
+#container1 img{
+    padding-left:130px ;
+    height: 50%;
+    padding-top: 10px;
+}
+#green img{
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
+    margin-left:170px;
+   
+    
+  }
+
+/* #green{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #28a745;
+    position: relative;
+  } */
 
 #con-first{
     width: 80%;
@@ -28,6 +53,17 @@
     font-weight: 500;
     line-height: 1.2;
 }
+#container1{
+    background-color: #ffffff;
+    height: 50px;
+    width: 100%;
+    
+    margin-top: -5px;
+    
+    
+
+}
+
 #container p{
     display: block;
     margin-block-start: 1em;

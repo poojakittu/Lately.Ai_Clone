@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./login.css" />
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="container1">
+        <a href="./index.html">
+            <img src="https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/5fd8f444e5106349b4570e0b_lately-nav-logo.svg">   
+        </a>
+    </div>
+        
+    <div id="cont">
+        <h2>Thank You for Ordering</h2>
+        <h2>Your Order Is Successfull</h2>
+    </div>
+
+</body>
+</html>
+<script>
+    
+    
+    let loginuser=JSON.parse(localStorage.getItem("signin"));
+    document.querySelector("#paymentname").innerHTML=loginuser.fname;
+    
+</script>
