@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./login.css" />
+    <style>
+        body{
+            background-image: url(https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/61c1fcb478083ac00ef63308_heart.png);
+        }
+        #cont{
+            background-color: rgb(226, 211, 211);
+            background-image: url(https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/61c1fcb478083ac00ef63308_heart.png);
+            color: brown;
+            font-weight: 900;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            width: 60%;
+            height: 500px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        #small{
+            background: linear-gradient(to bottom, #33ccff , #ff99cc ,  #33ccff ,  #33ccff, #ff99cc, #33ccff);
+            padding: 30px;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            position: relative;
+            animation: mymove 4s ;
+        }
+
+        #small {animation-timing-function: linear;}
+        #small {animation-timing-function: ease;}
+        #small{animation-timing-function: ease-in;}
+        #small {animation-timing-function: ease-out;}
+        #small {animation-timing-function: ease-in-out;}
+
+@keyframes mymove {
+  from {bottom: 1000px;}
+  to {bottom: 00px;}
+}
+    </style>
+</head>
+<body>
+    <div id="container1">
+        <a href="./index.html">
+            <img src="https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/5fd8f444e5106349b4570e0b_lately-nav-logo.svg">   
+        </a>
+    </div>
+        
+    <div id="cont">
+        <div id="small">
+
+            <h2>Thank You for Ordering</h2>
+            <h2>Your Order Is Successfull</h2>
+            <p>Order id - #123456789</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+<script>
+    
+    
+    let loginuser=JSON.parse(localStorage.getItem("signin"));
+    document.querySelector("#paymentname").innerHTML=loginuser.fname;
+    
+</script>

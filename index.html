@@ -4,7 +4,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./test.css" />
+    <style>
+        #inner{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            background-color: white;
+            margin-top: 11px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            width: 1000px;
+            column-gap: 10px;
+        }
+        #inner2{
+           
+            background-color: white;
+            margin-top: 8px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            width: 220px;
+            padding: 20px;
+            text-align: left;
+            padding-left: 30px;
+           
+        }
+        #inner div{
+        padding: 15px;
+        text-align: left;
+        
+           
+       }
+        #blank{
+            background-color: transparent;
+            height: 20px;
+        }
+
+        #inner h4{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            color: #133d36;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.25px;
+        }
+        #inner p{
+        
+            flex-wrap: wrap;
+            color: #5f5f5f;
+            font-size: 15px;
+            line-height: 21px;
+            font-weight: 300;
+        }
+
+        #inner h5{
+            display: block;
+            font-size: 0.83em;
+            margin-block-start: 1.67em;
+            margin-block-end: 1.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+    }
+    .patner1{
+        background-color: #e8f8f2;
+    }
+    .patner1:hover{
+            color: green;
+        }
+    </style>
 </head>
 <body>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,21 +83,53 @@
         <div id="second_navbar">
             <div id="navBox">
                 <div>
-                    <img src="https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/5fd8f444e5106349b4570e0b_lately-nav-logo.svg">   
+                    <a href="./index.html">
+                        <img src="https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/5fd8f444e5106349b4570e0b_lately-nav-logo.svg">   
+                    </a>
                 </div>
 
                 <div>
                     <div class="dropdown">
                         <span>Product</span>
                         <div class="dropdown-content">
-                            <h4 class="patner">PARTNERS & INTEGRATIONS</h4>
-                            Find social media platform 
-                            integrations and content extensions 
-                            to enhance your AI content creation
-                            experience.
-                            <h4>HubSpot Marketing Hub</h4>
-                           <h4>Hootsuite</h4> 
-                            <h4>UpContent</h4>
+                            <div id="blank">
+
+                            </div>
+                            <div id="inner">
+                                <div class="patner1">
+                                    <h4 >PARTNERS & INTEGRATIONS</h4>
+                                    <p>Find social media platform 
+                                    integrations and content extensions 
+                                    to enhance your AI content creation
+                                    experience.</p>
+                                    <h5>HubSpot Marketing Hub</h5>
+                                    <h5>Hootsuite</h5> 
+                                    <h5>UpContent</h5>
+                                </div>
+                                <div>
+                                    <h4 >AI CONTENT WRITER</h4>
+                                    <p>Automatically writes and pre-tests content for your social media programs</p>
+                                    <br>
+                                    <h4>SOCIAL ANALYTICS</h4>
+                                    <p>Informs your content strategy and make your content more engaging with content analytics</p>
+                                </div>
+                                <div >
+                                    <h4>SOCIAL MEDIA MARKETING</h4>
+                                    <p>Everything you need to scale your social media marketing program</p>
+                                    <br>
+                                    <h4>SOCIAL SELLING</h4>
+                                    <p>Extend your social content across executives, sales, employees, franchises, and more</p>
+                                    
+                                </div>
+                                <div class="patner1">
+                                    <h4 >VIDEO AUTOGENERATOR</h4>
+                                    <p>Turn your company videos into bite-sized social media video clips and social media posts</p>
+                                    <br>
+                                    <h4>PARENT ACCOUNTS</h4>
+                                    <p>Easily manage parent-child social media accounts</p>
+                                </div>
+                                
+                            </div>
                         
                            
                         </div>
@@ -43,6 +140,10 @@
                     <div class="dropdown">
                         <span>Resource</span>
                         <div class="dropdown-content">
+                            <div id="blank">
+
+                            </div>
+                        <div id="inner2">
                           <p>Customers Stories</p>
                           <p>Lately Office Hours SIGN-UP</p>
                           <p>Lately LIVE Replay</p>
@@ -50,6 +151,7 @@
                           <p>Ebooks</p>
                           <p>Blog</p>
                           <p>Help Center</p>
+                          </div>
                         </div>
                       </div>
                     
@@ -59,11 +161,16 @@
                     <div class="dropdown">
                         <span>Comapny</span>
                         <div class="dropdown-content">
+                            <div id="blank">
+
+                            </div>
+                        <div id="inner2">
                           <p>About</p>
                           <p>LeaderShip</p>
                           <p>Press & News</p>
                           <p>Lately Professional Services</p>
                           <p>Contact Us</p>
+                          </div>
                         </div>
                       </div>
                 </div>
@@ -147,6 +254,23 @@
             </div>
         </div>
 
+        <div id="containervdo">
+            <div>
+                <div id="vdofirst">
+                    <video src="https://cdnlately-v3.s3.amazonaws.com/lately_looping.mp4" width="100%" height="100%" loop="loop" muted="muted" playsinline="" autoplay="autoplay"></video>
+
+                </div>
+                <div id="vdosecond">
+                    <h1>How it works.</h1>
+                    <p>First, Lately’s artificial intelligence studies
+                    what your social media audience wants to watch, hear or read and then builds you a custom writing model, based on what it learns.
+                    Then it uses that writing model to automatically repurpose any longform video, audio or text into DOZENS of pre-tested social media posts, based on what it learns. (Yes, way!)
+                </p>
+                </div>
+
+            </div>
+        </div>
+
 
 
         <div id="container4">
@@ -158,6 +282,7 @@
 
                 <div id="ai-gen" >
                     <div>
+                        
                         <div>
                             <img src="https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/6002236421b928e945df4385_stat4.png">
                         </div>
@@ -235,6 +360,9 @@
 
     <div id="container6">
         <div id="cont1">
+            <div id="green">
+                <img src=" https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/5fd7b374b200124961cb94ac_home-quote-icon.png">
+             </div>
             <h1>
                 Generate meaningful words that convert with the world’s most human AI
             </h1>
@@ -265,17 +393,105 @@
             <h1>
                 Ready to start generating more effective social posts with AI?
             </h1>
-            <button id="get_started"><a class="singup" href="./signup.html">GET STARTED</a></button>
+            <button id="get_started2"><a  class="singup"  href="./signup.html">TRY IT FREE</a></button>
         </div>
     </div>
 
     </div>
 
-</div>
+    <!-- footer -->
+    <div id="footer">
+        <div id="footerid">
+            <div>
+                <h1>COMPANY</h1>
+                <h2>About</h2>  
+                <h2> Leadership</h2>
+                 <h2>Professional Services</h2>
+                <h2> Press & News</h2>
+                <h2>Contact Us</h2>
+                <br>
+                <h1> PARTNERS & INTEGRATIONS</h1>
+                <h2> HubSpot Marketing Hub</h2>
+                <h2> Hootsuite</h2>
+                <h2> UpContent</h2>
+            </div>
+
+            <div>
+                <h1>PRODUCT</h1>
+                <h2>Pricing</h2>  
+                <h2> Product Overview</h2>
+                <h2>AI Social Content Writer</h2>
+                <h2> Social Media Marketing</h2>
+                <h2>Social Selling</h2>
+                <h2> PARTNERS & INTEGRATIONS</h2>
+                <h2> HubSpot Marketing Hub</h2>
+                <h2> Hootsuite</h2>
+                <h2> UpContent</h2>
+            </div>
         
 
+            <div>
+                <h1>INDUSTRIES</h1>
+                <h2>Every Size</h2>  
+                <h2> Global Enterprises</h2>
+                 <h2>Franchises</h2>
+                <h2> Press & News</h2>
+                <h2>Small Businesses</h2>
+                <br>
+                <h1>Technology</h1>
+                <h2> Professional Services</h2>
+                <h2> Hootsuite</h2>
+                <h2> UpContent</h2>
+            </div>
 
+            <div>
+                <h1>COMPANY</h1>
+                <h2>About</h2>  
+                <h2> Leadership</h2>
+                 <h2>Professional Services</h2>
+                <h2> Press & News</h2>
+                <h2>Contact Us</h2>
+                <h1> PARTNERS & INTEGRATIONS</h1>
+                <h2> HubSpot Marketing Hub</h2>
+                <h2> Hootsuite</h2>
+                <h2> UpContent</h2>
+            </div>
+        </div>
 
+        <div id="hr">
+            <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+        </div>
+            
+        <div id="footerinside">
+            <div id="footer1">
+                <img src="https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/5fd7e81a75428f60b5ff0d00_lately-footer-logo.svg">
+            </div>
 
+            <div id="footer2">
+                <img src="https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/5fd7ea98ca57d5a01f8b06ac_lately-footer-facebook-icon.svg">
+                <img src="https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/5fd7ea98d033dccb4e0c5c8a_lately-footer-twitter-icon.svg">
+                <img src="https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/5fd7ea98a46fb9298adb10cf_lately-footer-linkedin-icon.svg">
+                <img src="https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/5fd7ea981e42d6cdd21dc804_lately-footer-instagram-icon.svg">
+                <img src="https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/5fd7ea98d97acfb972a65b4a_lately-footer-youtube-icon.svg">
+                <img src="https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/60199af29cf48909018c3acc_social_tiktok_grey.svg">
+                <img src="https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/5fd7ea98852e65824bc54cf9_lately-footer-email-icon.svg">
+            </div>
+
+        </div>  
+        <div id="footerlast">
+            <div>
+            <div >
+                <p> Terms ● Privacy</p>
+            </div>
+
+            <div >
+                <p>Copyright © 2022 Lately, Inc. Stone Ridge, NY, USA</p>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+</div>
     </body>
     </html>

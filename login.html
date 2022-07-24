@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="./login.css" />
 </head>
 <body>
-    <div id="container">
-        <div id="container1">
-            <img src="https://dashboard.lately.ai/images/logo_lately_bg_light.svg">
-        </div>
+    <div id="container1">
+        <a href="./index.html">
+            <img src="https://global-uploads.webflow.com/5fd3c52ce5bc147a1f007ca4/5fd8f444e5106349b4570e0b_lately-nav-logo.svg">   
+        </a>
+    </div>
         <div id="container2">
             
                 <h1>Log In</h1>/
@@ -58,7 +59,7 @@
             arr1.forEach(function(e){
                 if(obj.email==e.email){
                     flag=true;
-                    localStorage.getItem("signin",JSON.stringify(e))
+                    localStorage.setItem("signin",JSON.stringify(e))
                     window.location.href="./login1.html"
                 }
             })
