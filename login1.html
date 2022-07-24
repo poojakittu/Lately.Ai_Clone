@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./login1.css" />
+</head>
+<body>
+    <div id="container">
+       <h1> Welcome back to Lately!</h1>
+        <h3>Hi there, superstar. We missed ya.</h3>
+        <form action="" id="form">
+            <table>
+                <tr>
+                    
+                        <td >
+                            <span id="name1">Email Address</span><br>
+                            <input  id="name" name="email" type="text" />
+                        </td>
+                
+                </tr>
+
+                <tr>
+                    <td>
+                        <span id="name1">Password
+                            
+                        </span><br>
+                        <input  id="name" name="password" type="password" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td  >
+                        <input id="submit" type="submit" name="submit" value="LOG IN" />
+                        <input id="forgot" type="submit" name="forgot" value="Forgot Password" />
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>>
+                </tr>
+
+                
+
+            </table>
+        </form>
+        <span id="lasttext">Don't have an account yet? Sign up now!</span>
+    </div>
+</body>
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit",singin);
+    let arr1=JSON.parse(localStorage.getItem("newuser"));
+    let form=document.querySelector("form")
+    function singin(event){
+
+        event.preventDefault();
+       
+
+            if(arr1.length===0){
+                alert("No User till Now")
+                return
+            }
+
+            let obj={
+                email:form.email.value,
+                password:form.password.value
+            }
+
+            let flag=false
+            if(obj.email==""||obj.password==""){
+                return
+            }
+            arr1.forEach(function(e){
+                if(obj.email===e.email && obj.password===e.password){
+                    flag=true;
+                    localStorage.setItem("signin",JSON.stringify(e))
+                    window.location.href="./payment.html"
+                }
+            })
+            if(flag==false){
+                alert("User Not Exists");
+
+            }
+       
+
+    }
+</script>
